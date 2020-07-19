@@ -78,11 +78,11 @@ facebookLogoURL="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_ic
     let email = this.registerForm.value.email;
     let password = this.registerForm.value.password;
 
-    if(name){
-      this.error_name = true;
-    }else{
-      this.error_name = false;
-    }
+    // if(name){
+    //   this.error_name = true;
+    // }else{
+    //   this.error_name = false;
+    // }
     if(name && email && password){
 
     }else{
