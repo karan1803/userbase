@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <mat-toolbar>
+            <span class="header">LOGIN</span>
+        </mat-toolbar>
+        <mat-card class="my-card">
+            <mat-card-content>
+                <form [formGroup]="loginForm" class="my-form">
+                <mat-form-field class="full-width">
+                    <mat-label>Email</mat-label>
+                    <input  matInput  placeholder="Email" formControlName="email" name="email">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input  matInput  placeholder="Password" formControlName="password" name="password">
+                </mat-form-field>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button (click)="tryLogin(loginForm.value)" color="primary">Login</button>
+                <button mat-button style="padding: 1rem;" (click)="tryGoogleLogin()">
+                    <mat-icon style="width: 50px; height:30px"
+                              svgIcon="glogo"></mat-icon> Login With Google
+                  </button>
+                  <button mat-button style="padding: 1rem;" (click)="tryFacebookLogin()">
+                    <mat-icon style="width: 50px; height:30px; font-size: 15px;"
+                              svgIcon="fblogo"></mat-icon> Login With Facebook
+                  </button>
+            </mat-card-actions>
+            <mat-card-content>
+                <p>No account yet? <a style="color: blue;" href="/register">Create an account</a></p>
+            </mat-card-content>
+        </mat-card>
+        
+    </div>
+</div>
